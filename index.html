@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four in a Row - the classic, with a real AI</title>
+<meta name="description" content="Four in a Row (Connect Four) with a real minimax AI in three difficulties, plus local 2-player mode. The hard AI sees seven moves ahead.">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; background:#101426; color:#e5ebff; min-height:100vh; }
+  .hero { min-height:92vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:40px 20px;
+    background:radial-gradient(ellipse 75% 50% at 50% 110%, #2b3a8f33 0%, #1e2a6b1a 40%, transparent 70%); }
+  .badge { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:#fbbf24; border:1px solid #57440f; border-radius:999px; padding:6px 16px; margin-bottom:26px; }
+  h1 { font-size:clamp(38px,7.5vw,72px); font-weight:800; line-height:1.06;
+    background:linear-gradient(120deg,#fff3d6,#fbbf24 45%,#d32f2f); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { font-size:clamp(16px,2.4vw,21px); color:#6b7699; max-width:560px; margin-top:20px; line-height:1.55; }
+  .cta { margin-top:38px; display:inline-block; background:linear-gradient(135deg,#fbbf24,#d97706); color:#1a1005; font-size:18px; font-weight:800;
+    padding:16px 44px; border-radius:14px; text-decoration:none; box-shadow:0 10px 34px #fbbf2440; transition:transform .15s ease; }
+  .cta:hover { transform:translateY(-2px); }
+  .feats { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; max-width:900px; margin:0 auto; padding:20px 20px 70px; }
+  .f { background:#1a2140; border:1px solid #2a3560; border-radius:14px; padding:22px; }
+  .f .ic { font-size:26px; }
+  .f h3 { font-size:16px; margin:10px 0 6px; }
+  .f p { font-size:14px; color:#6b7699; line-height:1.5; }
+  footer { text-align:center; color:#49537a; font-size:13px; padding:26px; border-top:1px solid #1a2140; }
+  footer a { color:#fbbf24; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="badge">iLanis App Factory &middot; idea #17</div>
+    <h1>It sees seven moves<br>ahead. Do you?</h1>
+    <p class="sub">The connect-four classic, played properly. Drop discs, build fours, block theirs. Three AI difficulties powered by real minimax search with alpha-beta pruning - or grab a friend and settle it locally.</p>
+    <a class="cta" href="app.html">Drop your first disc</a>
+  </section>
+  <section class="feats">
+    <div class="f"><div class="ic">&#129302;</div><h3>Real AI, not scripts</h3><p>Minimax with alpha-beta pruning and center-control evaluation. Hard mode searches seven plies deep and punishes mistakes.</p></div>
+    <div class="f"><div class="ic">&#127919;</div><h3>Three difficulties</h3><p>Easy plays loose, medium sees four moves, hard sees seven. Pick your humiliation level.</p></div>
+    <div class="f"><div class="ic">&#129309;</div><h3>2-player mode</h3><p>Pass the phone or share the keyboard. Red and yellow, best friends, worst enemies.</p></div>
+    <div class="f"><div class="ic">&#10024;</div><h3>Clean finish</h3><p>Winning fours glow white, full columns are refused, session score keeps tally of you vs the machine.</p></div>
+  </section>
+  <footer>No sign-up. No tracking. Everything runs in your browser.<br>
+  Built by the <a href="https://ilanis-agent.github.io/app-factory/">iLanis App Factory</a> &middot; <a href="https://github.com/iLanis-agent/four-in-a-row">source on GitHub</a></footer>
+</body>
+</html>
