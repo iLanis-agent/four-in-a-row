@@ -170,7 +170,6 @@ function finish(w){
   over=true;
   if(!w){ tallies.d++; setMsg('Board full - draw.','info'); }
   else {
-    markWin(w.line);
     var humanWon = mode()==='human' ? false : w.player===1;
     if(mode()==='human'){
       setMsg((w.player===1?'Red':'Yellow')+' wins!','good');
@@ -178,6 +177,7 @@ function finish(w){
     else { tallies.l++; setMsg('AI wins this one. Again?','bad'); }
   }
   draw();
+  if(w) markWin(w.line);
 }
 function onCol(col){
   if(over) return;
